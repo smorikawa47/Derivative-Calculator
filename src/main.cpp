@@ -2,8 +2,6 @@
 #include <string.h>
 #include <string>
 #include <cstring>
-//#include <conio.h>
-//#include <windows.h>
 
 //HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);//handles text color changes
 using namespace std;
@@ -27,53 +25,34 @@ void productrule() //For these proofs we highlighted specific areas by changing 
     cout << "                 h                           h" << endl;
     cout << endl;
     cout << "lim";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << " f(x+h)";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "*[g(x+h)-g(x)] + ";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "g(x)";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "*[f(x+h)-h(x)]" << endl;
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "h->0       -------------        -------------" << endl;
     cout << "                 h                    h\n";
     cout << endl;
 
     cout << "lim";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << " f(x+h)";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "* ";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "lim ";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << " [g(x+h)-g(x)] + ";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "lim   g(x)";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "*[h(x+h)-h(x)]" << endl;
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "h->0";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "        h->0";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << " ------------- ";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "  h->0";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "       -------------\n";
     cout << "                       h                          h\n";
     cout << "f(x)*g'(x) + g(x)*f'(x)" << endl;
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << endl;
 }
 
 void quotientrule()
 {
-    //SetConsoleTextAttribute(hConsole, 10);
     cout << "Quotient Rule:\n";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "d/dx [f(x)/g(x)] = (f(x) d/dx[g(x)] - g(x) d/dx [f(x)]) / (g(x))^2\n" << " = (f(x)*g'(x)] - g(x)*f'(x)) / (g(x))^2 " << endl;
     cout << "lim     f(x+h)*g(x)   f(x)*g(x+h)\n";
     cout << "h->0    ---------- - ------------\n";
@@ -82,74 +61,46 @@ void quotientrule()
     cout << "                   h\n";
     cout << endl;
     cout << "lim ";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << " 1";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "  f(x+h)*g(x)";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "-f(x+h)*g(x)-f(x)*(x+h)";
-   // SetConsoleTextAttribute(hConsole, 15);
     cout << "+f(x)*g(x)\n";
     cout << "h->0";
-   // SetConsoleTextAttribute(hConsole, 13);
     cout << " -";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "  --------------------------------------------\n";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "     h";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "                   g(x+h)*g(x)" << endl; // secondn line
     cout << endl;
     cout << "lim ";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << " g(x)*";
-   // SetConsoleTextAttribute(hConsole, 15);
     cout << "[f(x+h)-f(x)] - ";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "f(x)*";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "[g(x+h)-g(x)]\n";
     cout << "h->0";
     cout << " ---------------------------------------\n";
     cout << "                h*g(x+h)*g(x)" << endl;
     cout << endl;
     cout << "lim ";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "     1";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "       *  g(x)*";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "f(x+h)-f(x)";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << " - f(x)*";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "g(x+h)-g(x)\n";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "h->0 ";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "-----------         -----------        -----------\n";
     cout << "     g(x+h)*g(x)              h                  h\n";
     cout << endl;
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "   1      [g(x)*";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "f'(x)";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << " - f(x)*";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "g'(x)]\n";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "--------\n";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << "(g(x))^2\n";
     cout << endl;
-    //SetConsoleTextAttribute(hConsole, 15);
 }
 void exponentrule()
 {
-    //SetConsoleTextAttribute(hConsole, 10);
     cout << "Exponent Rule:\n";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "d/dx e^x = e^x        d/dx [e^u] = e^u du/dx\n";
     cout << "d/dx a^x = a^x ln(a)    d/dx a^u = a^u ln(a) du/dx " << endl;
     cout << endl;
@@ -162,23 +113,15 @@ void exponentrule()
     cout << "      h                             2\n";
     cout << endl;
     cout << "lim ";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << " h";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "                      n*(n - 1)*x ^ (n - 2)*h\n";
     cout << "h->0";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << " -  ";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "*";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << " x^n";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "+n*x^(n - 1) + -----------------------  ... + h ^ (n - 1)";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << " - x^n\n";
     cout << "     h";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "                                2\n";
     cout << endl;
     cout << "lim               n*(n-1)*x^(n-2)*h\n";
@@ -191,17 +134,13 @@ void exponentrule()
 
 void chainrule()
 {
-    //SetConsoleTextAttribute(hConsole, 10);
     cout << "Chain Rule:\n";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "d/dx f(g(x)) = f'(g(x))g'(x)" << endl;
     cout << endl;
 }
 void sumrule()
 {
-    //SetConsoleTextAttribute(hConsole, 10);
     cout << "Sum Rule:\n";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "d\n";
     cout << "--  [f(x)+g(x)] = f'(x)+g'(x)\n";
     cout << "dx\n";
@@ -216,9 +155,7 @@ void sumrule()
 
 void constantrule()
 {
-    //SetConsoleTextAttribute(hConsole, 10);
     cout << "Constant Rule:\n";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "f(x)=C, f'(x)=0\n";
     cout << "lim  C-C\n";
     cout << "h->0 ---\n";
@@ -279,13 +216,9 @@ string Deriv_Calculation(string polynomial)
         }
     }
     cout << "The derivative of ";
-    //SetConsoleTextAttribute(hConsole, 10);
     cout << originalPolynomial;
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << " is: ";
-    //SetConsoleTextAttribute(hConsole, 13);
     cout << derivative << endl; //Display the original polynomial and the derivative.
-    //SetConsoleTextAttribute(hConsole, 15);
     
     return derivative;
 }
@@ -293,7 +226,6 @@ int main()
 {
     string derivatives[ARSize];
     string derivative;
-    //SetConsoleTextAttribute(hConsole, 15); //set default text color to white
      char choice;
      while (true)                //run until the user closes the application
      {
