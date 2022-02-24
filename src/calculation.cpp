@@ -30,24 +30,24 @@ string Deriv_Calculation(string polynomial)
     double derivativeValues[ARSize];
     for (int i = degree; i != -1; i--) //Loops until the polynomail values have stored all the coefficients of the polynomial.
     {
-        if (polynomial.size() < 3) //once polynomial gets to a point without 'x', we can no longer use 'x as a reference to find the coefficients'
+        if (polynomial.size() < 3)     //once polynomial gets to a point without 'x', we can no longer use 'x as a reference to find the coefficients'
         {
             polynomialValues[i] = polynomial.substr(polynomial.find_first_of("+") + 1, polynomial.length()); //Takes all the values after the '+' sign, this is the constant value of the polynomial.
         }
         else
         {
-            polynomialValues[i] = polynomial.substr(0, polynomial.find_first_of("x"));                //Use 'x' as a reference to find the coefficients of the polynomial.
-            polynomial = polynomial.substr(polynomial.find_first_of("x") + 4, polynomial.length());    //turn polynomial into a substring which doesn't include the first 'x' so we can use the first 'x' of the substring as a reference.
+            polynomialValues[i] = polynomial.substr(0, polynomial.find_first_of("x"));                       //Use 'x' as a reference to find the coefficients of the polynomial.
+            polynomial = polynomial.substr(polynomial.find_first_of("x") + 4, polynomial.length());          //turn polynomial into a substring which doesn't include the first 'x' so we can use the first 'x' of the substring as a reference.
         }
     }
     for (int i = degree; i != 0; i--)
     {
         derivativeValues[i] = stod(polynomialValues[i]) * i;     //convert the string value into a double value and multiply by the degree that that coefficeint belongs to. This is known as the exponent rule
         derivativeDegrees = to_string(i - 1);                    //decrease the degree by one
-        derivativeComponents = "x^" + derivativeDegrees + "+";    //the rest of the components to make the derivative into its own string.
-        if(i == 1)                                                //if the degree is one, do not include the '+' because there is no value after it.
+        derivativeComponents = "x^" + derivativeDegrees + "+";   //the rest of the components to make the derivative into its own string.
+        if(i == 1)                                               //if the degree is one, do not include the '+' because there is no value after it.
             derivative = derivative + to_string(derivativeValues[i]);
-        else                                                    //otherwise include the '+' because there is a value after it.
+        else                                                     //otherwise include the '+' because there is a value after it.
         {
             derivative = derivative + to_string(derivativeValues[i]) + derivativeComponents;
         }
@@ -55,7 +55,7 @@ string Deriv_Calculation(string polynomial)
     cout << "The derivative of ";
     cout << originalPolynomial;
     cout << " is: ";
-    cout << derivative << endl; //Display the original polynomial and the derivative.
+    cout << derivative << endl;                                  //Display the original polynomial and the derivative.
     
     return derivative;
 }

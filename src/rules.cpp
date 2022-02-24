@@ -6,9 +6,7 @@ using namespace std;
 
 void productrule() //For these proofs we highlighted specific areas by changing the color and then changing the color back to default, so it will be more appealing to look at. The code is kind of a mess though.
 {
-    //SetConsoleTextAttribute(hConsole, 10);
     cout << "Product Rule:\n";
-    //SetConsoleTextAttribute(hConsole, 15);
     cout << "d/dx [f(x)*g(x)] = f(x) * d/dx [g(x)] + g(x) * d/dx [f(x)]\n" << endl;
     cout << endl;
     cout << "lim  f(x+h)*g(x+h)-f(x+h)*g(x)  +  f(x+h)*g(x)-f(x)*g(x)" << endl;
