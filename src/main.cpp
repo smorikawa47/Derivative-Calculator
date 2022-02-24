@@ -7,13 +7,10 @@
 
 //HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);//handles text color changes
 using namespace std;
-const int ARSize = 10;
-string Deriv_Calculation(string polynomial);
-int degreeReturn(string polyonmial);
 
 void Menu() //A simple menu so the user has a choice of what they want to do.
 {
-    cout << " A) Take derivative of a polynomial\n P) Product Rule\n Q) Quotient Rule\n E) Exponent Rule\n C) Chain Rule\n O) Constant Rule\n S) Sum Rule\n" << endl;
+    cout << " A) Take derivative of a polynomial\n P) Product Rule\n Q) Quotient Rule\n E) Exponent Rule\n C) Chain Rule\n O) Constant Rule\n S) Sum Rule\n T) Exit\n" << endl;
 }
 
 int main()
@@ -21,7 +18,8 @@ int main()
     string derivatives[ARSize];
     string derivative;
      char choice;
-     while (true)                //run until the user closes the application
+     bool quit = false;
+     while (!quit)                //run until the user closes the application
      {
          Menu();
          cout << "Your choice: ";
@@ -59,6 +57,9 @@ int main()
              break;
          case 'O':
              constantrule();
+             break;
+         case 'T':
+             quit = true;
              break;
          }
      }

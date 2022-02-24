@@ -4,6 +4,8 @@
 #include <cstring>
 using namespace std;
 
+const int ARSize = 10;
+
 string SetFunction() //A simple function asking the user to input a polynomial. Input must be in a strict format for the program to read it correctly.
 {
 
