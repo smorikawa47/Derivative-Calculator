@@ -4,8 +4,7 @@
 #include <cstring>
 using namespace std;
 
-void productrule() //For these proofs we highlighted specific areas by changing the color and then changing the color back to default, so it will be more appealing to look at. The code is kind of a mess though.
-{
+void productrule() { //For these proofs we highlighted specific areas by changing the color and then changing the color back to default, so it will be more appealing to look at. The code is kind of a mess though.
     cout << "Product Rule:\n";
     cout << "d/dx [f(x)*g(x)] = f(x) * d/dx [g(x)] + g(x) * d/dx [f(x)]\n" << endl;
     cout << endl;
@@ -39,8 +38,7 @@ void productrule() //For these proofs we highlighted specific areas by changing 
     cout << endl;
 }
 
-void quotientrule()
-{
+void quotientrule() {
     cout << "Quotient Rule:\n";
     cout << "d/dx [f(x)/g(x)] = (f(x) d/dx[g(x)] - g(x) d/dx [f(x)]) / (g(x))^2\n" << " = (f(x)*g'(x)] - g(x)*f'(x)) / (g(x))^2 " << endl;
     cout << "lim     f(x+h)*g(x)   f(x)*g(x+h)\n";
@@ -87,8 +85,8 @@ void quotientrule()
     cout << "(g(x))^2\n";
     cout << endl;
 }
-void exponentrule()
-{
+
+void exponentrule() {
     cout << "Exponent Rule:\n";
     cout << "d/dx e^x = e^x        d/dx [e^u] = e^u du/dx\n";
     cout << "d/dx a^x = a^x ln(a)    d/dx a^u = a^u ln(a) du/dx " << endl;
@@ -121,14 +119,12 @@ void exponentrule()
     cout << endl;
 }
 
-void chainrule()
-{
+void chainrule() {
     cout << "Chain Rule:\n";
     cout << "d/dx f(g(x)) = f'(g(x))g'(x)" << endl;
     cout << endl;
 }
-void sumrule()
-{
+void sumrule() {
     cout << "Sum Rule:\n";
     cout << "d\n";
     cout << "--  [f(x)+g(x)] = f'(x)+g'(x)\n";
@@ -142,8 +138,7 @@ void sumrule()
     cout << endl;
 }
 
-void constantrule()
-{
+void constantrule() {
     cout << "Constant Rule:\n";
     cout << "f(x)=C, f'(x)=0\n";
     cout << "lim  C-C\n";
