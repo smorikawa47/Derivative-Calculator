@@ -30,12 +30,13 @@ string Deriv_Calculation(string polynomial) {
     for (int i = degree; i != -1; i--) {                         //Loops until the polynomail values have stored all the coefficients of the polynomial.
         if (polynomial.size() == 1) {                            //once polynomial gets to a point without 'x', we can no longer use 'x as a reference to find the coefficients'
             // polynomialValues[i] = polynomial.substr(polynomial.find_first_of("+") + 1, polynomial.length()); 
-            polynomialValues[i] = polynomial;                    //Takes all the values after the '+' sign, this is the constant value of the polynomial.
+            polynomialValues[i] = polynomial;                    //Takes all the values after the '+' sign, this is the constant value of the polynomial. which is 6 in 9x^3+0x^2+7x^1+6
         }
         else
         {
             polynomialValues[i] = polynomial.substr(0, polynomial.find_first_of("x"));                       //Use 'x' as a reference to find the coefficients of the polynomial.
-            polynomial = polynomial.substr(polynomial.find_first_of("x") + 4, polynomial.length());          //turn polynomial into a substring which doesn't include the first 'x' so we can use the first 'x' of the substring as a reference. For the first iteration of the polynomial = 9x^3+0x^2+7x^1+6, polynomial becomes 0x^2+7x^1+6
+            polynomial = polynomial.substr(polynomial.find_first_of("x") + 4, polynomial.length());          //turn polynomial into a substring which doesn't include the first 'x' so we can use the first 'x' of the substring as a reference. 
+                                                                                                             // For the first iteration on the polynomial = 9x^3+0x^2+7x^1+6, polynomial becomes 0x^2+7x^1+6
         }
     }
 
