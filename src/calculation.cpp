@@ -29,7 +29,6 @@ string Deriv_Calculation(string polynomial) {
 
     for (int i = degree; i != -1; i--) {                         //Loops until the polynomail values have stored all the coefficients of the polynomial.
         if (polynomial.size() == 1) {                            //once polynomial gets to a point without 'x', we can no longer use 'x as a reference to find the coefficients'
-            // polynomialValues[i] = polynomial.substr(polynomial.find_first_of("+") + 1, polynomial.length()); 
             polynomialValues[i] = polynomial;                    //Takes all the values after the '+' sign, this is the constant value of the polynomial. which is 6 in 9x^3+0x^2+7x^1+6
         }
         else
