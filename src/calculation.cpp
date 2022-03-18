@@ -2,6 +2,7 @@
 #include <string.h>
 #include <string>
 #include <cstring>
+#include <iomanip>
 using namespace std;
 
 const int ARSize = 10;
@@ -50,11 +51,8 @@ string Deriv_Calculation(string polynomial) {
             derivative = derivative + to_string(derivativeValues[i]) + derivativeComponents;
         }
     }
-    
-    cout << "The derivative of ";
-    cout << originalPolynomial;
-    cout << " is: ";
-    cout << derivative << endl;                                  //Display the original polynomial and the derivative.
+                                  
+    cout << "The derivative of " << originalPolynomial << " is: " << derivative << endl; //Display the original polynomial and the derivative.
     
     return derivative;
 }
