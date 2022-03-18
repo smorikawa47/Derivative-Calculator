@@ -9,7 +9,7 @@ const int ARSize = 10;
 string SetFunction() { //A simple function asking the user to input a polynomial. Input must be in a strict format for the program to read it correctly.
     string polynomial;
     while (cin.get() != '\n');
-    cout << "Enter a polynomial function for example (9x^3+0x^2+7x^1+6)\nYou must include a number for all coefficeints even if it is 0, this includes the final constant\n: "; //Must input polynomial in the same style as the example.
+    cout << "Enter a polynomial function for example 9x^3+0x^2+7x^1+6\nYou must include a number for all coefficeints even if it is 0, this includes the final constant\n: "; //Must input polynomial in the same style as the example.
     getline(cin, polynomial);
     cout << "Your polynomial: " << polynomial << endl;
     return polynomial;

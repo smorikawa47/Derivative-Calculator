@@ -7,7 +7,7 @@
 using namespace std;
 
 void Menu() { //A simple menu so the user has a choice of what they want to do.
-    cout << " A) Take derivative of a polynomial\n P) Product Rule\n Q) Quotient Rule\n E) Exponent Rule\n C) Chain Rule\n O) Constant Rule\n S) Sum Rule\n T) Exit\n" << endl;
+    cout << " A) Take derivative of a polynomial\t P) Product Rule\n Q) Quotient Rule\t \t \t E) Exponent Rule\n C) Chain Rule\t \t \t \t O) Constant Rule\n S) Sum Rule\t \t \t \t T) Exit\n" << endl;
 }
 
 int main() {
