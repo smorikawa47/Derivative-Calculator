@@ -25,6 +25,10 @@ string SetFunction() { //A simple function asking the user to input a polynomial
             isImputValid = false;
             cout << "Invalid Input. Press Enter to retype a polynomial" << endl;
         }
+        else if(temp.substr(temp.size()-2, 1) != "+") {
+            isImputValid = false;
+            cout << "Invalid Input. Press Enter to retype a polynomial" << endl;
+        }
         else {
             int degree = degreeReturn(temp);
             if(temp.size() == 6) {
