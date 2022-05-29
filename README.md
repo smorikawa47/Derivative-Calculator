@@ -1,4 +1,4 @@
-# Derivative-Calculator
+# Derivative Calculator
 
 ## Derivative Calculation
 Derivative calculator keeps calculating derivatives until the exponent of the first term becomes 1
